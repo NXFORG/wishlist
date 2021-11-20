@@ -1,0 +1,30 @@
+#searchForm {
+    width: 25%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#searchForm input, #searchForm select {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--darkblue);
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#searchForm label {
+    font-size: 1.2em;
+}
+
+#searchForm input[type='submit']{
+    background-color: var(--medblue);
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#searchForm input[type='submit']:hover{
+    background-color: var(--meddarkblue);
+    color: #fff;
+    cursor: pointer;
+}

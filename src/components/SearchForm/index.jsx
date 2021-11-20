@@ -24,7 +24,7 @@ export const SearchForm = () => {
     return (
         <>
             {!formComplete ? (
-            <form onSubmit={handleSubmit}>
+            <form id='searchForm' onSubmit={handleSubmit}>
                 <label htmlFor='user'>Username</label>
                 <input name='user' type='text' onChange={handleUser}/>
                 <label htmlFor='type'>Occasion</label>

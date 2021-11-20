@@ -5,7 +5,7 @@ import './style.css';
 export const Footer = () => {
     return (
         <section className='footer'>
-            <h1>2021</h1>
+            <h1>2021 Chris Anstead</h1>
         </section>
     )
 }
