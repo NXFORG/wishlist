@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+
+:root {
+    --darkblue: #081326;
+    --meddarkblue: #182654;
+    --medblue: #192f78;
+}
+
+* {
+    font-family: 'Shippori Antique B1', sans-serif;
+}
+
+body {
+    margin: 0;
+}

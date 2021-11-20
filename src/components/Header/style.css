@@ -1,0 +1,14 @@
+nav {
+    background-color: var(--darkblue);
+    padding: 20px;
+}
+
+#navTitle, #navLink {  
+    color: #fff;
+    text-decoration: none;
+}
+
+#navTitle {
+    margin-right: 50px;
+    font-size: 1.2em;
+}

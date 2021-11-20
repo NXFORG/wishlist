@@ -1,0 +1,25 @@
+.giftItem {
+    border-bottom: 1px solid #30363d;
+    padding: 20px;
+}
+
+.giftItem:last-of-type{
+    border-bottom: 0;
+}
+
+.giftItem h2 {
+    display: inline;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+.giftItem>h2>a {
+    color: #58a6ff;
+    text-decoration: underline;
+}
+
+.visible {
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    padding: 3px;
+}
