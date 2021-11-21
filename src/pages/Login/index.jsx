@@ -12,7 +12,7 @@ export const Login = () => {
 
     return (
         <>
-            <button onClick={changeForm}>{login ? 'Login' : 'Register'}</button>
+            <button id='showLoginBtn' onClick={changeForm}>{login ? 'Login' : 'Register'}</button>
             {login ? <RegForm /> : <LoginForm />}
         </>
     )
