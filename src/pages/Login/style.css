@@ -1,5 +1,19 @@
 #showLoginBtn {
-    width: 10%;
-    margin-left: auto;
+    display: block;
+    width: 20%;
+    margin-top: 50px;
     margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    padding: 5px;
+    background-color: var(--medlightblue);
+    color: #fff;
+    font-size: 1.2em;
+    border: 2px solid var(--darkblue);
+}
+
+#showLoginBtn:hover{
+    background-color: var(--meddarkblue);
+    color: #fff;
+    cursor: pointer;
 }

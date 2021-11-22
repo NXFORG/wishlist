@@ -45,7 +45,7 @@ export const ListContainer = ({user, type}) => {
 
     return (
         <>
-            <h1 id='giftTitle'><span className='giftTitleSpan'>Username: </span>{user} <span className='giftTitleSpan'>Occasion: </span>{type}</h1>
+            <h1 id='giftTitle'><span className='giftTitleSpan'>Username: </span><span className='giftTitleUser'>{user}</span><span className='giftTitleSpan'>Occasion: </span>{type}</h1>
             <article className="listContainer">
                 {gifts.length ? renderGifts() : noGifts()}
             </article>

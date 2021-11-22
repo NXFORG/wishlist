@@ -1,0 +1,23 @@
+#occasionSelectForm {
+    width: 20%;
+}
+
+#occasionSelectForm input {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--darkblue);
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#occasionSelectForm input[type='submit']{
+    background-color: var(--medblue);
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#occasionSelectForm input[type='submit']:hover{
+    background-color: var(--meddarkblue);
+    color: #fff;
+    cursor: pointer;
+}

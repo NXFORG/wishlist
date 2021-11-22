@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import jwt_decode from "jwt-decode";
-//import './style.css';
+import './style.css';
 
 export const LoginForm = () => {
     const [login, setLogin] = useState(false);
@@ -50,7 +50,8 @@ export const LoginForm = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <h2 className='formHeader'>Sign-in to an account</h2>
+            <form className='regLoginForm' onSubmit={handleSubmit}>
                 <label htmlFor='username'>Username</label>
                 <input type='text' name='username' onChange={handleUser}/>
                 <label htmlFor='password'>Password</label>

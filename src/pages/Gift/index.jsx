@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { GiftForm } from '../../components/index';
-//import './style.css';
+import './style.css';
 
 export const Gift = () => {
     const [form, setForm] = useState(false);
@@ -34,10 +34,10 @@ export const Gift = () => {
 
     return (
         <>
-        <div>
+        <div id='giftPageContainer'>
             <Link id='logoutBtn' onClick={handleLogout} to='/'>Logout</Link>
-            <h1>Hi {localStorage.getItem('username')}</h1>
-            <form onSubmit={handleSubmit}>
+            <h1>Hi <span id='loggedUser'>{localStorage.getItem('username')}</span></h1>
+            <form id='actionForm' onSubmit={handleSubmit}>
                 <label htmlFor='actions'>My actions:</label>
                 <select name='actions' onChange={handleType}>
                     <option value='view'>View my list</option>

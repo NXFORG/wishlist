@@ -1,13 +1,27 @@
 #giftTitle {
-    text-align: center;
+    position: absolute;
+    top: 100px;
+    left: 500px;
 }
 
 .giftTitleSpan {
     color: var(--medblue);
 }
 
+.giftTitleUser {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.giftTitleUser::first-letter {
+    text-transform: uppercase;
+}
+
 .listContainer {
-    width: 60%;
+    position: absolute;
+    top: 220px;
+    left: 500px;
+    width: 40%;
     margin: 0 auto 100px auto;
     border: 2px solid #30363d;
     border-radius: 5px;

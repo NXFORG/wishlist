@@ -1,0 +1,26 @@
+.regLoginForm {
+    width: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.regLoginForm input {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--darkblue);
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.regLoginForm input[type='submit']{
+    background-color: var(--medblue);
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.regLoginForm input[type='submit']:hover{
+    background-color: var(--meddarkblue);
+    color: #fff;
+    cursor: pointer;
+}

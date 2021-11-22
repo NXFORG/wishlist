@@ -1,0 +1,39 @@
+#giftPageContainer {
+    padding: 20px;
+}
+
+#logoutBtn {
+    color: red;
+}
+
+#loggedUser {
+    display: inline-block;
+}
+
+#loggedUser::first-letter {
+    text-transform: uppercase;
+}
+
+#actionForm {
+    width: 20%;
+}
+
+#actionForm select, #actionForm input {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--darkblue);
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#actionForm input[type='submit']{
+    background-color: var(--medblue);
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#actionForm input[type='submit']:hover{
+    background-color: var(--meddarkblue);
+    color: #fff;
+    cursor: pointer;
+}
