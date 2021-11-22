@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import jwt_decode from "jwt-decode";
 //import './style.css';
 
@@ -6,12 +7,13 @@ export const LoginForm = () => {
     const [login, setLogin] = useState(false);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const tryLogin = (data) => {
         const decodedToken = jwt_decode(data.token);
         localStorage.setItem('username', decodedToken.username);
         localStorage.setItem('token', data.token);
-        window.open('/gift')
+        navigate('/gift');
     }
 
     useEffect(() => {

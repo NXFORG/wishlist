@@ -5,9 +5,9 @@ import './style.css';
 export const Home = () => {
     return (
         <>
-        <div>
-            <SearchForm />
-        </div>
+            <div>
+                <SearchForm />
+            </div>
         </>
     )
 }

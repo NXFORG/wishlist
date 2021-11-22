@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import jwt_decode from "jwt-decode";
 //import './style.css';
 
 export const RegForm = () => {
@@ -6,6 +8,15 @@ export const RegForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confPass, setConfPass] = useState('');
+    const navigate = useNavigate();
+
+    const tryLogin = (data) => {
+        console.log(data)
+        const decodedToken = jwt_decode(data.token);
+        localStorage.setItem('username', decodedToken.username);
+        localStorage.setItem('token', data.token);
+        navigate('/gift');
+    }
 
     useEffect(() => {
         if(register){
@@ -16,7 +27,14 @@ export const RegForm = () => {
                         body: JSON.stringify({username: username, password: password }),
                         headers: {"Content-type": "application/json; charset=UTF-8"}
                     })
-                    alert('Registration Successful')
+                    console.log('Registration Successful');
+                    let response = await fetch(`http://localhost:3000/users/login`, {
+                        method: "POST",
+                        body: JSON.stringify({username: username, password: password}),
+                        headers: {"Content-type": "application/json; charset=UTF-8"}
+                    });
+                    let jsonResponse = await response.json();
+                    jsonResponse ? tryLogin(jsonResponse) : alert('Please try again.')
                 } catch(err) {
                     console.log(err);
                 }
