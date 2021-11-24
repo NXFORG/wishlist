@@ -1,11 +1,28 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-module.exports = {
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const ROOT_DIRECTORY = path.join(__dirname, '../'); 
+const PUBLIC_DIRECTORY = path.join(ROOT_DIRECTORY, 'public');
+
+const config = {
+  entry: [path.resolve(ROOT_DIRECTORY, 'src/index.js')], 
   output: {
-    path: path.join(__dirname, '../dist'),
-    filename: 'index.bundle.js',
-    publicPath: '/'
+    path: path.resolve(ROOT_DIRECTORY, 'dist'), 
+    filename: 'bundle.js', 
+    publicPath: '/', 
   },
+  mode: 'development', 
+  resolve: {
+    modules: [path.resolve('node_modules'), 'node_modules'], 
+  },
+  performance: {
+    hints: false,
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(PUBLIC_DIRECTORY, 'index.html'),
+    }),
+  ],
   module: {
     rules: [
       {
@@ -13,20 +30,21 @@ module.exports = {
         resolve: {
           extensions: [".js", ".jsx"]
         },
-        exclude: /nodeModules/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
         }
-      },
+      }, 
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
+        use: ['style-loader', 'css-loader'],
+      }, 
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: 'asset/resource',
-      }
-    ]
+        test: /\.(png|svg|jpg|gif|pdf)$/,
+        use: ['file-loader'],
+      }, 
+    ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: './public/index.html' })],
-}
+};
+
+module.exports = config;
