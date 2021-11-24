@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development --config config/dev.webpack.config.js",
-    "build": "webpack --mode production"
+    "build": "webpack --config config/prod.webpack.config.js"
   },
   "keywords": [],
   "author": "",
