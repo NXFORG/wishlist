@@ -20,7 +20,7 @@ export const LoginForm = () => {
         if(login){
             const loginUser = async () => {
                 try {
-                    let response = await fetch(`http://localhost:3000/users/login`, {
+                    let response = await fetch(`https://ca-xmas-api.herokuapp.com/users/login`, {
                         method: "POST",
                         body: JSON.stringify({username: username, password: password}),
                         headers: {"Content-type": "application/json; charset=UTF-8"}

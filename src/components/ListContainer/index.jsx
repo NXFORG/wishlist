@@ -11,7 +11,7 @@ export const ListContainer = ({user, type, mod}) => {
         const fetchUser = async() => {
             try {
                 const lowerUser = user.toLowerCase();
-                const results = await axios.get(`http://localhost:3000/users/find/${lowerUser}`);
+                const results = await axios.get(`https://ca-xmas-api.herokuapp.com/users/find/${lowerUser}`);
                 setUserId(results.data.id);
             } catch(err) {
                 console.log(err);
@@ -24,7 +24,7 @@ export const ListContainer = ({user, type, mod}) => {
         const fetchGifts = async() => {
             try {
                 const lowerType = type.toLowerCase();
-                const results = await axios.get(`http://localhost:3000/present/user/${userId}/${lowerType}`);
+                const results = await axios.get(`https://ca-xmas-api.herokuapp.com/present/user/${userId}/${lowerType}`);
                 setGifts(results.data);
             } catch(err) {
                 console.log(err);

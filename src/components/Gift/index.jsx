@@ -12,7 +12,7 @@ export const Gift = ({name, description, price, link, priority, id, mod}) => {
         if(del){
             const deleteGift = async() => {
                 try {
-                    await fetch(`http://localhost:3000/present/${id}`,{
+                    await fetch(`https://ca-xmas-api.herokuapp.com/present/${id}`,{
                         method: "DELETE",
                         headers: {
                             'Authorization': localStorage.getItem('token')
