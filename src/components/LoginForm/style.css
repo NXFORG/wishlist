@@ -1,11 +1,11 @@
-#searchForm {
-    width: 25%;
-    margin-top: 100px;
-    margin-left: auto;
+.regLoginForm {
+    width: 20%;
     margin-right: auto;
+    margin-left: auto;
     text-align: center;
 }
-#searchForm input, #searchForm select {
+
+.regLoginForm input {
     display: block;
     width: 100%;
     border: 2px solid var(--darkblue);
@@ -13,25 +13,20 @@
     padding: 5px;
 }
 
-#searchForm label {
-    font-size: 1.2em;
-}
-
-#searchForm input[type='submit']{
+.regLoginForm input[type='submit']{
     background-color: var(--medblue);
     color: #fff;
     font-size: 1.2em;
 }
 
-#searchForm input[type='submit']:hover{
+.regLoginForm input[type='submit']:hover{
     background-color: var(--meddarkblue);
     color: #fff;
     cursor: pointer;
 }
 
 @media only screen and (max-width: 450px) {
-    #searchForm {
-        margin-top: 50px;
+    .regLoginForm {
         width: 90%;
     }
 }

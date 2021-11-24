@@ -1,0 +1,40 @@
+#giftPageGrid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    border-top: 2px solid var(--darkblue);
+}
+
+#occasionSelectForm {
+    margin-top: 4em;
+    width: 100%;
+}
+
+#occasionSelectForm input {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--darkblue);
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#occasionSelectForm input[type='submit']{
+    background-color: var(--medblue);
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#occasionSelectForm input[type='submit']:hover{
+    background-color: var(--meddarkblue);
+    color: #fff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 450px) {
+    #occasionSelectForm {
+        margin-top: 20px
+    }
+
+    #giftPageGrid {
+        display: block;
+    }
+}

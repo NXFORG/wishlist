@@ -1,0 +1,30 @@
+#addForm {
+    width: 100%;
+}
+
+#addForm input, #addForm select {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--darkblue);
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#addForm input[type='submit']{
+    background-color: var(--medblue);
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#addForm input[type='submit']:hover{
+    background-color: var(--meddarkblue);
+    color: #fff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 450px) {
+    #addForm {
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+}

@@ -1,3 +1,4 @@
+
 #giftTitle {
     text-align: center;
 }
@@ -6,10 +7,24 @@
     color: var(--medblue);
 }
 
+.giftTitleUser {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.giftTitleUser::first-letter {
+    text-transform: uppercase;
+}
+
 .listContainer {
-    width: 60%;
+    width: 95%;
     margin: 0 auto 100px auto;
     border: 2px solid #30363d;
     border-radius: 5px;
-    text-align: left;
+}
+
+@media only screen and (max-width: 450px) {
+    #giftTitle {
+        font-size: 1.2em;
+    }
 }
