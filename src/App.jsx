@@ -1,7 +1,7 @@
 import React from 'react';
-import * as Pages from './pages';
-import { Header } from './components';
-import { Footer } from './components';
+import * as Pages from './pages/index';
+import { Header } from './components/index';
+import { Footer } from './components/index';
 import { Routes, Route } from 'react-router-dom';
 import './style.css';
 
