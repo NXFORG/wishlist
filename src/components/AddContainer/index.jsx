@@ -23,7 +23,7 @@ export const AddContainer = () => {
         const fetchUser = async() => {
             try {
                 const lowerUser = localStorage.getItem('username').toLowerCase();
-                const results = await fetch(`http://localhost:3000/users/find/${lowerUser}`);
+                const results = await fetch(`https://ca-xmas-api.herokuapp.com/users/find/${lowerUser}`);
                 const resultsJson = await results.json();
                 setUserId(resultsJson.id);
             } catch(err) {
@@ -35,7 +35,7 @@ export const AddContainer = () => {
 
     const createGift = async() => {
         try {
-            const results = await fetch(`http://localhost:3000/present/`, {
+            const results = await fetch(`https://ca-xmas-api.herokuapp.com/present/`, {
                 method: "POST",
                 body: JSON.stringify(
                     {

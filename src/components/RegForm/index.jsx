@@ -22,13 +22,13 @@ export const RegForm = () => {
         if(register){
             const regUser = async () => {
                 try {
-                    await fetch(`http://localhost:3000/users/register`, {
+                    await fetch(`https://ca-xmas-api.herokuapp.com/users/register`, {
                         method: "POST",
                         body: JSON.stringify({username: username, password: password }),
                         headers: {"Content-type": "application/json; charset=UTF-8"}
                     })
                     console.log('Registration Successful');
-                    let response = await fetch(`http://localhost:3000/users/login`, {
+                    let response = await fetch(`https://ca-xmas-api.herokuapp.com/users/login`, {
                         method: "POST",
                         body: JSON.stringify({username: username, password: password}),
                         headers: {"Content-type": "application/json; charset=UTF-8"}
