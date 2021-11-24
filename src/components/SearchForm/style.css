@@ -28,3 +28,10 @@
     color: #fff;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 450px) {
+    #searchForm {
+        margin-top: 50px;
+        width: 90%;
+    }
+}

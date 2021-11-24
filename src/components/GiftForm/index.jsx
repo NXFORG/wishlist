@@ -19,7 +19,7 @@ export const GiftForm = ({type}) => {
     }
 
     return (
-        <>
+        <div id='giftPageGrid'>
             {type === 'add' || type === 'update' ? (
                 <AddContainer />
             ):(
@@ -29,9 +29,9 @@ export const GiftForm = ({type}) => {
                         <input type='text' name='occasion' onChange={handleTypeInput}/>
                         <input type='submit' />
                     </form>
-                    {form && <ListContainer user={localStorage.getItem('username')} type={occasion}/>}
+                    {form && <ListContainer user={localStorage.getItem('username')} type={occasion} mod={true}/>}
                 </>
             )}
-        </>
+        </div>
     )
 }

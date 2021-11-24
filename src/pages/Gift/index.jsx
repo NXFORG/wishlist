@@ -33,22 +33,18 @@ export const Gift = () => {
     }
 
     return (
-        <>
         <div id='giftPageContainer'>
             <Link id='logoutBtn' onClick={handleLogout} to='/'>Logout</Link>
-            <h1>Hi <span id='loggedUser'>{localStorage.getItem('username')}</span></h1>
+            <h1 id='loggedTitle'>Hi <span id='loggedUser'>{localStorage.getItem('username')}</span></h1>
             <form id='actionForm' onSubmit={handleSubmit}>
                 <label htmlFor='actions'>My actions:</label>
                 <select name='actions' onChange={handleType}>
-                    <option value='view'>View my list</option>
+                    <option value='view'>View and manage my list</option>
                     <option value='add'>Add an item</option>
-                    <option value='update'>Modify list</option>
-                    <option value='delete'>Delete item</option>
                 </select>
                 <input type='submit' />
             </form>
             {form && <GiftForm type={type}/>}
         </div>
-        </>
     )
 }

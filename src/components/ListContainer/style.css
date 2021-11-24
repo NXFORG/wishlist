@@ -1,7 +1,6 @@
+
 #giftTitle {
-    position: absolute;
-    top: 100px;
-    left: 500px;
+    text-align: center;
 }
 
 .giftTitleSpan {
@@ -18,12 +17,14 @@
 }
 
 .listContainer {
-    position: absolute;
-    top: 220px;
-    left: 500px;
-    width: 40%;
+    width: 95%;
     margin: 0 auto 100px auto;
     border: 2px solid #30363d;
     border-radius: 5px;
-    text-align: left;
+}
+
+@media only screen and (max-width: 450px) {
+    #giftTitle {
+        font-size: 1.2em;
+    }
 }

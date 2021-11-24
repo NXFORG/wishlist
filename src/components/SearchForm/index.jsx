@@ -34,7 +34,7 @@ export const SearchForm = () => {
                     <option value='other'>Other</option>
                 </select>
                 <input type='submit'/>
-            </form>):(<ListContainer user={user} type={type} />)}
+            </form>):(<ListContainer user={user} type={type} mod={false}/>)}
         </>
     )
 }

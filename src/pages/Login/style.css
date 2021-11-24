@@ -17,3 +17,9 @@
     color: #fff;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 450px) {
+    #showLoginBtn {
+        width: 90%;
+    }
+}

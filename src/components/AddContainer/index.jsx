@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-//import './style.css';
+import './style.css';
 
 export const AddContainer = () => {
     const [ userId, setUserId] = useState(0);
@@ -16,7 +16,7 @@ export const AddContainer = () => {
     );
 
     const handleAddInput = (e) => {
-        setAddValues((prevState) => ({...prevState, [e.target.name]:e.target.value}));
+        setAddValues((prevState) => ({...prevState, [e.target.name]:e.target.value.toLowerCase()}));
     }
 
     useEffect(() => {
@@ -66,7 +66,7 @@ export const AddContainer = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form id='addForm' onSubmit={handleSubmit}>
                 <label htmlFor='gitfName'>Gift Name</label>
                 <input type='text' name='giftName' onChange={handleAddInput}/>
                 <label htmlFor='gitfDesc'>Gift Description</label>

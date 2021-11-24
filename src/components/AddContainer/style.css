@@ -1,11 +1,8 @@
-.regLoginForm {
-    width: 20%;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
+#addForm {
+    width: 100%;
 }
 
-.regLoginForm input {
+#addForm input, #addForm select {
     display: block;
     width: 100%;
     border: 2px solid var(--darkblue);
@@ -13,20 +10,21 @@
     padding: 5px;
 }
 
-.regLoginForm input[type='submit']{
+#addForm input[type='submit']{
     background-color: var(--medblue);
     color: #fff;
     font-size: 1.2em;
 }
 
-.regLoginForm input[type='submit']:hover{
+#addForm input[type='submit']:hover{
     background-color: var(--meddarkblue);
     color: #fff;
     cursor: pointer;
 }
 
 @media only screen and (max-width: 450px) {
-    .regLoginForm {
-        width: 90%;
+    #addForm {
+        margin-top: 20px;
+        margin-bottom: 100px;
     }
 }
