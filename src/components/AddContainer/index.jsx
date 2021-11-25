@@ -3,6 +3,7 @@ import './style.css';
 
 export const AddContainer = () => {
     const [ userId, setUserId] = useState(0);
+    const [ success, setSuccess] = useState(false);
 
     const [addValues, setAddValues] = useState(
         {
@@ -55,7 +56,7 @@ export const AddContainer = () => {
             });
             console.log(addValues);
             console.log(results);
-            window.location.reload(false);
+            setSuccess(true);
         } catch(err) {
             console.log(err);
         }
@@ -64,6 +65,7 @@ export const AddContainer = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         createGift();
+        e.target.reset();
     }
 
     return (
@@ -86,12 +88,12 @@ export const AddContainer = () => {
                 <label htmlFor='gitfOcc'>Gift Occasion</label>
                 {/* <input type='text' name='giftOcc' onChange={handleAddInput}/> */}
                 <select name='giftOcc' onChange={handleAddInput}>
-                    <option value='all'>All</option>
                     <option value='birthday'>Birthday</option>
                     <option value='christmas'>Christmas</option>
                     <option value='other'>Other</option>
                 </select>
                 <input type='submit' />
+                {success && <p id='addSuccessMessage'>Item added to your list.</p>}
             </form>
         </>
     )

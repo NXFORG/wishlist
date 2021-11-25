@@ -22,6 +22,11 @@
     cursor: pointer;
 }
 
+#addSuccessMessage {
+    color: green;
+    text-align: center;
+}
+
 @media only screen and (max-width: 450px) {
     #addForm {
         margin-top: 20px;
