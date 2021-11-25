@@ -40,6 +40,11 @@
 }
 
 @media only screen and (max-width: 450px) {
+    .visible {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
     .giftDelete {
         float: none;
         margin-top: 20px;

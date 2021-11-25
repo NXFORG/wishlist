@@ -5,7 +5,7 @@ import './style.css';
 
 export const SearchForm = () => {
     const [user, setUser] = useState('');
-    const [type, setType] = useState('birthday');
+    const [type, setType] = useState('all');
     const [formComplete, setFormComplete] = useState(false);
 
     const handleUser = (e) => {
@@ -29,6 +29,7 @@ export const SearchForm = () => {
                 <input name='user' type='text' onChange={handleUser}/>
                 <label htmlFor='type'>Occasion</label>
                 <select name='type' onChange={handleOccasion}>
+                    <option value='all'>All</option>
                     <option value='birthday'>Birthday</option>
                     <option value='christmas'>Christmas</option>
                     <option value='other'>Other</option>

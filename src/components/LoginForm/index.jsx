@@ -22,13 +22,14 @@ export const LoginForm = () => {
                 try {
                     let response = await fetch(`https://ca-xmas-api.herokuapp.com/users/login`, {
                         method: "POST",
-                        body: JSON.stringify({username: username, password: password}),
+                        body: JSON.stringify({username: username.toLowerCase(), password: password}),
                         headers: {"Content-type": "application/json; charset=UTF-8"}
                     });
                     let jsonResponse = await response.json();
                     jsonResponse ? tryLogin(jsonResponse) : alert('Please try again.')
                 } catch(err) {
                     console.log(err);
+                    window.location.reload(false);
                 }
             }
             loginUser();

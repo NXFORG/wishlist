@@ -9,7 +9,7 @@
     width: 100%;
 }
 
-#occasionSelectForm input {
+#occasionSelectForm input, #occasionSelectForm select {
     display: block;
     width: 100%;
     border: 2px solid var(--darkblue);

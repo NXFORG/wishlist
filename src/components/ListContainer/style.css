@@ -18,13 +18,35 @@
 
 .listContainer {
     width: 95%;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 20px auto;
     border: 2px solid #30363d;
     border-radius: 5px;
 }
 
+#reloadBtnContainer {
+    text-align: center;
+}
+
+#reloadButton {
+    width: 20%;
+    border: 2px solid var(--darkblue);
+    padding: 5px;
+    background-color: var(--medblue);
+    color: #fff;
+    font-size: 1.2em;
+}
+
 @media only screen and (max-width: 450px) {
     #giftTitle {
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+
+    .listContainer {
+        width: 90%;
+    }
+
+    #reloadButton { 
+        width: 90%;
+        margin-bottom: 100px;
     }
 }
