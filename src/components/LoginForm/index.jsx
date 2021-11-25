@@ -29,6 +29,7 @@ export const LoginForm = () => {
                     jsonResponse ? tryLogin(jsonResponse) : alert('Please try again.')
                 } catch(err) {
                     console.log(err);
+                    window.location.reload(false);
                 }
             }
             loginUser();

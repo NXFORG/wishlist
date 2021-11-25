@@ -26,7 +26,13 @@ export const GiftForm = ({type}) => {
                 <>
                     <form id='occasionSelectForm' onSubmit={handleSubmit}>
                         <label htmlFor='occasion'>Wishlist occasion</label>
-                        <input type='text' name='occasion' onChange={handleTypeInput}/>
+                        {/* <input type='text' name='occasion' onChange={handleTypeInput}/> */}
+                        <select name='occasion' onChange={handleTypeInput}>
+                            <option value='all'>All</option>
+                            <option value='birthday'>Birthday</option>
+                            <option value='christmas'>Christmas</option>
+                            <option value='other'>Other</option>
+                        </select>
                         <input type='submit' />
                     </form>
                     {form && <ListContainer user={localStorage.getItem('username')} type={occasion} mod={true}/>}

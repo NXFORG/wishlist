@@ -25,6 +25,11 @@
     cursor: pointer;
 }
 
+#loginErrorMessage {
+    text-align: center;
+    color: darkred;
+}
+
 @media only screen and (max-width: 450px) {
     .regLoginForm {
         width: 90%;

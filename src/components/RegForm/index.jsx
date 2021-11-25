@@ -8,6 +8,7 @@ export const RegForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [confPass, setConfPass] = useState('');
+    const [error, setError] = useState(false);
     const navigate = useNavigate();
 
     const tryLogin = (data) => {
@@ -37,6 +38,7 @@ export const RegForm = () => {
                     jsonResponse ? tryLogin(jsonResponse) : alert('Please try again.')
                 } catch(err) {
                     console.log(err);
+                    setError(true);
                 }
             }
             regUser();
@@ -77,6 +79,7 @@ export const RegForm = () => {
                 <input type='password' name='confirmPassword' onChange={handleConfirm}/>
                 <input type='submit'/>
             </form>
+            {error && <p id='regFormError'>An error occurred, please try again.</p>}
         </>
     )
 }

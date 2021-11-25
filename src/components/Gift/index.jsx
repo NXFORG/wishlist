@@ -27,11 +27,13 @@ export const Gift = ({name, description, price, link, priority, id, mod}) => {
     },[del])
 
     return (
-        <section className="giftItem">
+        <>
+        {!del && <section className="giftItem">
             <h2><a href={`//${link}`} target='_blank'>{name}</a></h2><span className="visible">{priority} priority</span>
             {mod && <button className='giftDelete' onClick={handleClick}>Delete</button>}
             <p>{description}</p>
             <p>{price}</p>
-        </section>
+        </section>}
+        </>
     )
 }

@@ -10,8 +10,8 @@ export const AddContainer = () => {
             giftDesc:'', 
             giftPrice:'', 
             giftLink:'',
-            giftPriority:'',
-            giftOcc:''
+            giftPriority:'high',
+            giftOcc:'all'
         }
     );
 
@@ -45,7 +45,7 @@ export const AddContainer = () => {
                         present_price: addValues.giftPrice,
                         present_link: addValues.giftLink,
                         present_priority: addValues.giftPriority,
-                        present_occasion: addValues.giftOcc
+                        present_occasion: addValues.giftOcc.toLowerCase()
                     }
                 ),
                 headers: {
@@ -53,7 +53,9 @@ export const AddContainer = () => {
                     'Authorization': localStorage.getItem('token')
                 }
             });
+            console.log(addValues);
             console.log(results);
+            window.location.reload(false);
         } catch(err) {
             console.log(err);
         }
@@ -82,7 +84,13 @@ export const AddContainer = () => {
                     <option value='low'>Low</option>
                 </select>
                 <label htmlFor='gitfOcc'>Gift Occasion</label>
-                <input type='text' name='giftOcc' onChange={handleAddInput}/>
+                {/* <input type='text' name='giftOcc' onChange={handleAddInput}/> */}
+                <select name='giftOcc' onChange={handleAddInput}>
+                    <option value='all'>All</option>
+                    <option value='birthday'>Birthday</option>
+                    <option value='christmas'>Christmas</option>
+                    <option value='other'>Other</option>
+                </select>
                 <input type='submit' />
             </form>
         </>

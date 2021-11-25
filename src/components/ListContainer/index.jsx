@@ -48,12 +48,19 @@ export const ListContainer = ({user, type, mod}) => {
     
     const noGifts = () =>  <h1>No wishlist found for username: {user} on occasion: {type}</h1>
 
+    const reloadPage = () => {
+        window.location.reload(false)
+    }
+
     return (
         <div>
             <h1 id='giftTitle'><span className='giftTitleSpan'>Username: </span><span className='giftTitleUser'>{user}</span><span className='giftTitleSpan'>Occasion: </span>{type}</h1>
             <article className="listContainer">
                 {gifts.length ? renderGifts() : noGifts()}
             </article>
+            <div id='reloadBtnContainer'>
+                <button id='reloadButton' onClick={reloadPage}>Go back</button>
+            </div>
         </div>
     )
 }
