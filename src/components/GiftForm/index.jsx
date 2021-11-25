@@ -6,7 +6,7 @@ import './style.css';
 export const GiftForm = ({type}) => {
     const [form, setForm] = useState(false);
 
-    const [occasion, setOccasion] = useState('')
+    const [occasion, setOccasion] = useState('all')
 
     const handleSubmit = (e) => {
         e.preventDefault();
