@@ -16,7 +16,7 @@ export const AddContainer = () => {
     );
 
     const handleAddInput = (e) => {
-        setAddValues((prevState) => ({...prevState, [e.target.name]:e.target.value.toLowerCase()}));
+        setAddValues((prevState) => ({...prevState, [e.target.name]:e.target.value}));
     }
 
     useEffect(() => {
