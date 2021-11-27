@@ -49,7 +49,7 @@ export const ListContainer = ({user, type, mod}) => {
     const noGifts = () =>  <h1>No wishlist found for username: {user} on occasion: {type}</h1>
 
     const reloadPage = () => {
-        window.location.reload(false)
+        window.location.reload()
     }
 
     return (
