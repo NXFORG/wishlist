@@ -21,13 +21,14 @@
     margin: 0 auto 20px auto;
     border: 2px solid #30363d;
     border-radius: 5px;
+    margin-bottom: 150px;
 }
 
 #reloadBtnContainer {
     text-align: center;
 }
 
-#reloadButton {
+/* #reloadButton {
     width: 20%;
     border: 2px solid var(--darkblue);
     padding: 5px;
@@ -35,7 +36,7 @@
     color: #fff;
     font-size: 1.2em;
     margin-bottom: 100px;
-}
+} */
 
 @media only screen and (max-width: 450px) {
     #giftTitle {
@@ -46,7 +47,7 @@
         width: 90%;
     }
 
-    #reloadButton { 
+    /* #reloadButton { 
         width: 90%;
-    }
+    } */
 }
