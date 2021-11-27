@@ -48,9 +48,9 @@ export const ListContainer = ({user, type, mod}) => {
     
     const noGifts = () =>  <h1>No wishlist found for username: {user} on occasion: {type}</h1>
 
-    const reloadPage = () => {
+    /* const reloadPage = () => {
         window.location.reload()
-    }
+    } */
 
     return (
         <div>
@@ -58,9 +58,9 @@ export const ListContainer = ({user, type, mod}) => {
             <article className="listContainer">
                 {gifts.length ? renderGifts() : noGifts()}
             </article>
-            <div id='reloadBtnContainer'>
+            {/* <div id='reloadBtnContainer'>
                 <button id='reloadButton' onClick={reloadPage}>Go back</button>
-            </div>
+            </div> */}
         </div>
     )
 }
